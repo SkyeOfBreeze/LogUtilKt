@@ -18,21 +18,25 @@ package org.btelman.logutil.kotlin
 /**
  * Useful for measuring actions
  */
-class MeasurementUtil(val logUtil: LogUtil = LogUtil("MeasurementUtil")) {
+open class MeasurementUtil(val logUtil: LogUtil = LogUtil("MeasurementUtil")) {
     var list = HashMap<String, Long>()
 
     fun start(name : String){
         list[name] = System.currentTimeMillis()
 
         //Time already logged by LogUtil, so start time not needed here
-        logUtil.v { "$name : Starting Timer" }
+        log("$name : Starting Timer")
     }
 
     fun stop(name : String){
         list[name]?.let { startTime ->
             val diff = System.currentTimeMillis()-startTime
-            logUtil.d { "$name : Took $diff ms" }
+            log("$name : Took $diff ms")
         }
+    }
+
+    open fun log(message : String){
+        logUtil.d(message)
     }
 
     inline fun measure(name : String, func : ()->Unit){
