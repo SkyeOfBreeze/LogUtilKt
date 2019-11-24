@@ -7,6 +7,7 @@ import android.view.Menu
 import android.view.MenuItem
 
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.content_main.*
 import org.btelman.logutil.kotlin.LogUtil
 import org.btelman.logutil.kotlin.MeasurementUtil
 import java.lang.Exception
@@ -52,28 +53,33 @@ class MainActivity : AppCompatActivity() {
 
         setContentView(R.layout.activity_main)
         setSupportActionBar(toolbar)
-
-        fab.setOnClickListener { view ->
-            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                .setAction("Action", null).show()
-        }
         measurementUtil.stop(onCreateMeasurementTitle) //testing end of measurement
+
+        testCustomLogger()
     }
 
-    override fun onCreateOptionsMenu(menu: Menu): Boolean {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        menuInflater.inflate(R.menu.menu_main, menu)
-        return true
-    }
-
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        return when (item.itemId) {
-            R.id.action_settings -> true
-            else -> super.onOptionsItemSelected(item)
+    private fun testCustomLogger() {
+        val customClass = DemoCustomLogUtilInstance(
+            "Custom", null, null){ message, exception ->
+            debugTextView.text = "${debugTextView.text}\n${message}"
+            exception?.let {
+                debugTextView.text = "${debugTextView.text}\n$exception"
+            }
         }
+        LogUtil.addCustomLogUtilInstance("Custom1", customClass)
+        val log1 = LogUtil("CustomTest1", "Custom1") //set it up using instance reference
+        //LogUtil("CustomTest1", customClass) //Optionally set it up directly
+        log1.v {
+            //you can also throw in other code as well that is not related to logging
+            foo()
+            Thread.sleep(500) //simulate work in the lambda
+            "OnCreate" //finally return the result
+        }
+
+        log1.d{ "Debug!!!" }
+        log1.w{ "Warning!!!" }
+        log1.e{ "Error!!!" }
+        log1.e(Exception("Foo")){ "Error With Exception!!!" }
     }
 
     fun foo(){

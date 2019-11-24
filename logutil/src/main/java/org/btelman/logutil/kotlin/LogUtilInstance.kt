@@ -14,10 +14,6 @@ open class LogUtilInstance(
     protected var logLevel: LogLevel? = null,
     protected var printWriter : PrintWriter? = null
 ){
-    init {
-        sendStartEvent()
-    }
-
     /**
      * Send to a stream of some kind.
      * This sends to the local printWriter if it exists, but can also be overridden
@@ -73,9 +69,5 @@ open class LogUtilInstance(
 
     private fun resolveLogLevel() : LogLevel{
         return logLevel ?: LogUtil.logLevel
-    }
-
-    private fun sendStartEvent(){ //to get around sendToStream being not final
-        sendToStream(LogLevel.VERBOSE,"Session Start")
     }
 }
