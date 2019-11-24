@@ -1,0 +1,55 @@
+1574582217921 : V : Session Start
+1574582217922 : V : MeasurementUtil : MeasurementTest : Starting Timer
+1574582218924 : D : MeasurementUtil : MeasurementTest : Took 1001 ms
+1574582218972 : V : MainActivity : onCreate : Starting Timer
+1574582218973 : V : MainActivity : logTesting : Starting Timer
+1574582219473 : V : MainActivity : OnCreate
+1574582219474 : D : MainActivity : Debug!!!
+1574582219475 : W : MainActivity : Warning!!!
+1574582219475 : E : MainActivity : Error!!!
+1574582219480 : E : MainActivity : Error With Exception!!!
+***************
+java.lang.Exception: Foo
+	at org.btelman.logutil.kotlin.demo.MainActivity$onCreate$1.invoke(MainActivity.kt:39)
+	at org.btelman.logutil.kotlin.demo.MainActivity$onCreate$1.invoke(MainActivity.kt:14)
+	at org.btelman.logutil.kotlin.MeasurementUtil.measure(MeasurementUtil.kt:40)
+	at org.btelman.logutil.kotlin.demo.MainActivity.onCreate(MainActivity.kt:24)
+	at android.app.Activity.performCreate(Activity.java:6984)
+	at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1235)
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2797)
+	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:2923)
+	at android.app.ActivityThread.-wrap11(Unknown Source:0)
+	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1616)
+	at android.os.Handler.dispatchMessage(Handler.java:105)
+	at android.os.Looper.loop(Looper.java:164)
+	at android.app.ActivityThread.main(ActivityThread.java:6617)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.Zygote$MethodAndArgsCaller.run(Zygote.java:240)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:769)
+***************
+1574582219484 : V : MainActivity : Verbose non-lambda
+1574582219484 : D : MainActivity : debug non-lambda
+1574582219485 : W : MainActivity : warning non-lambda
+1574582219486 : E : MainActivity : error non-lambda
+1574582219489 : E : MainActivity : error non-lambda
+***************
+java.lang.Exception: bar
+	at org.btelman.logutil.kotlin.demo.MainActivity$onCreate$1.invoke(MainActivity.kt:49)
+	at org.btelman.logutil.kotlin.demo.MainActivity$onCreate$1.invoke(MainActivity.kt:14)
+	at org.btelman.logutil.kotlin.MeasurementUtil.measure(MeasurementUtil.kt:40)
+	at org.btelman.logutil.kotlin.demo.MainActivity.onCreate(MainActivity.kt:24)
+	at android.app.Activity.performCreate(Activity.java:6984)
+	at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1235)
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2797)
+	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:2923)
+	at android.app.ActivityThread.-wrap11(Unknown Source:0)
+	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1616)
+	at android.os.Handler.dispatchMessage(Handler.java:105)
+	at android.os.Looper.loop(Looper.java:164)
+	at android.app.ActivityThread.main(ActivityThread.java:6617)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.Zygote$MethodAndArgsCaller.run(Zygote.java:240)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:769)
+***************
+1574582219491 : D : MainActivity : logTesting : Took 518 ms
+1574582219654 : D : MainActivity : onCreate : Took 682 ms

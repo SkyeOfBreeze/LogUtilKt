@@ -1,0 +1,45 @@
+1574582324751 : V : Session Start
+1574582325804 : W : MainActivity : Warning!!!
+1574582325805 : E : MainActivity : Error!!!
+1574582325808 : E : MainActivity : Error With Exception!!!
+***************
+java.lang.Exception: Foo
+	at org.btelman.logutil.kotlin.demo.MainActivity$onCreate$1.invoke(MainActivity.kt:39)
+	at org.btelman.logutil.kotlin.demo.MainActivity$onCreate$1.invoke(MainActivity.kt:14)
+	at org.btelman.logutil.kotlin.MeasurementUtil.measure(MeasurementUtil.kt:40)
+	at org.btelman.logutil.kotlin.demo.MainActivity.onCreate(MainActivity.kt:24)
+	at android.app.Activity.performCreate(Activity.java:6984)
+	at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1235)
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2797)
+	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:2923)
+	at android.app.ActivityThread.-wrap11(Unknown Source:0)
+	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1616)
+	at android.os.Handler.dispatchMessage(Handler.java:105)
+	at android.os.Looper.loop(Looper.java:164)
+	at android.app.ActivityThread.main(ActivityThread.java:6617)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.Zygote$MethodAndArgsCaller.run(Zygote.java:240)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:769)
+***************
+1574582325811 : W : MainActivity : warning non-lambda
+1574582325812 : E : MainActivity : error non-lambda
+1574582325815 : E : MainActivity : error non-lambda
+***************
+java.lang.Exception: bar
+	at org.btelman.logutil.kotlin.demo.MainActivity$onCreate$1.invoke(MainActivity.kt:49)
+	at org.btelman.logutil.kotlin.demo.MainActivity$onCreate$1.invoke(MainActivity.kt:14)
+	at org.btelman.logutil.kotlin.MeasurementUtil.measure(MeasurementUtil.kt:40)
+	at org.btelman.logutil.kotlin.demo.MainActivity.onCreate(MainActivity.kt:24)
+	at android.app.Activity.performCreate(Activity.java:6984)
+	at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1235)
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2797)
+	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:2923)
+	at android.app.ActivityThread.-wrap11(Unknown Source:0)
+	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1616)
+	at android.os.Handler.dispatchMessage(Handler.java:105)
+	at android.os.Looper.loop(Looper.java:164)
+	at android.app.ActivityThread.main(ActivityThread.java:6617)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.Zygote$MethodAndArgsCaller.run(Zygote.java:240)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:769)
+***************

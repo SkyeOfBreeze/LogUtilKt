@@ -1,13 +1,6 @@
-1574581596212 : V : Session Start
-1574581596216 : V : MeasurementUtil : MeasurementTest : Starting Timer
-1574581597218 : D : MeasurementUtil : MeasurementTest : Took 1002 ms
-1574581597268 : V : MainActivity : onCreate : Starting Timer
-1574581597270 : V : MainActivity : logTesting : Starting Timer
-1574581597771 : V : MainActivity : OnCreate
-1574581597772 : D : MainActivity : Debug!!!
-1574581597772 : W : MainActivity : Warning!!!
-1574581597773 : E : MainActivity : Error!!!
-1574581597778 : E : MainActivity : Error With Exception!!!
+1574582348458 : V : Session Start
+1574582349517 : E : MainActivity : Error!!!
+1574582349522 : E : MainActivity : Error With Exception!!!
 ***************
 java.lang.Exception: Foo
 	at org.btelman.logutil.kotlin.demo.MainActivity$onCreate$1.invoke(MainActivity.kt:39)
@@ -27,11 +20,8 @@ java.lang.Exception: Foo
 	at com.android.internal.os.Zygote$MethodAndArgsCaller.run(Zygote.java:240)
 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:769)
 ***************
-1574581597783 : V : MainActivity : Verbose non-lambda
-1574581597784 : D : MainActivity : debug non-lambda
-1574581597784 : W : MainActivity : warning non-lambda
-1574581597785 : E : MainActivity : error non-lambda
-1574581597788 : E : MainActivity : error non-lambda
+1574582349525 : E : MainActivity : error non-lambda
+1574582349528 : E : MainActivity : error non-lambda
 ***************
 java.lang.Exception: bar
 	at org.btelman.logutil.kotlin.demo.MainActivity$onCreate$1.invoke(MainActivity.kt:49)
@@ -51,5 +41,3 @@ java.lang.Exception: bar
 	at com.android.internal.os.Zygote$MethodAndArgsCaller.run(Zygote.java:240)
 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:769)
 ***************
-1574581597790 : D : MainActivity : logTesting : Took 521 ms
-1574581597945 : D : MainActivity : onCreate : Took 677 ms

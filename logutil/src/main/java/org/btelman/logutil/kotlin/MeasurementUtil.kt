@@ -35,7 +35,7 @@ class MeasurementUtil(val logUtil: LogUtil = LogUtil("MeasurementUtil")) {
         }
     }
 
-    fun measure(name : String, func : ()->Unit){
+    inline fun measure(name : String, func : ()->Unit){
         start(name)
         func()
         stop(name)
