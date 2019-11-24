@@ -37,7 +37,7 @@ dependencies {
 ext{
     publishedGroupId = 'org.btelman.logutil'
     libraryName = 'kotlin'
-    artifact = 'kotlin'
+    artifact = 'logutil'
 
     libraryDescription = 'Log Utility functions for Kotlin on Android. ' +
             'Also supports printing to a file or customizing where the logs go.'

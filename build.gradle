@@ -19,13 +19,12 @@ buildscript {
 }
 
 def getGitHash = { ->
-//    def stdout = new ByteArrayOutputStream()
-//    exec {
-//        commandLine 'git', 'rev-parse', '--short', 'HEAD'
-//        standardOutput = stdout
-//    }
-//    return stdout.toString().trim()
-    return ""
+    def stdout = new ByteArrayOutputStream()
+    exec {
+        commandLine 'git', 'rev-parse', '--short', 'HEAD'
+        standardOutput = stdout
+    }
+    return stdout.toString().trim()
 }
 
 ext{
