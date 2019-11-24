@@ -1,5 +1,7 @@
 # Log Util for Kotlin on Android #
 
+[![Maintainability](https://api.codeclimate.com/v1/badges/c45969d316a69ad42558/maintainability)](https://codeclimate.com/github/btelman96/LogUtilKt/maintainability)
+
 This is a utility for logging in kotlin. This allows for optionally logging to a file or outputting the logs that use this class to other places using a custom class.
 
 ## Features ##
