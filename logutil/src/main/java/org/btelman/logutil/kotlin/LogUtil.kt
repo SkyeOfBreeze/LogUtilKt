@@ -18,7 +18,7 @@ import java.io.PrintWriter
 import java.lang.NullPointerException
 
 /**
- * Logging Util for the Control SDK with log levels
+ * Logging Util with log levels
  */
 class LogUtil{
     private val tag : String
