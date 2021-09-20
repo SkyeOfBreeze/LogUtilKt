@@ -42,5 +42,3 @@ ext{
     libraryDescription = 'Log Utility functions for Kotlin on Android. ' +
             'Also supports printing to a file or customizing where the logs go.'
 }
-
-apply from: '../bintray.gradle'
